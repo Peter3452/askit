@@ -5,12 +5,15 @@
 
 <%= render 'answers/form' %>
 
+<%= paginate @answers %>
 
 <% @answers.each do |answer| %>
-  <%= answer.body %>
+  <p><%= answer.body %></p>
   <p><%= answer.created_at.strftime('%Y-%m-%d %H:%M:%S') %></p>
   <%= link_to 'Edit answer', edit_question_answer_path(@question, answer) %>
   <%= link_to 'Delete answer', question_answer_path(@question, answer), method: :delete %>
 <% end %>
+
+<%= paginate @answers %>
 
 <p><%= link_to 'Back', questions_path %></p>
