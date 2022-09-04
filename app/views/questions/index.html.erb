@@ -3,7 +3,7 @@
 <p><%= link_to 'New question', new_question_path, class: 'btn btn-primary' %></p>
 
 <% @questions.each do |question| %>
-  <h2><%= question.title %></h2>
+  <h4><%= question.title %></h4>
   <%= question.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
   <p><%= question.body %></p>
   
