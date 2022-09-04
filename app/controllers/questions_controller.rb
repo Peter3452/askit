@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = @question.answers.build
-    @answers = Answer.order(created_at: :desc) #переменная во вьюхе, вывод вопросов
+    @answers = @question.answers.order(created_at: :desc) #переменная во вьюхе, вывод вопросов
   end
 
   def new 
@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to question_path
+      redirect_to questions_path
     else
       render :edit
     end
