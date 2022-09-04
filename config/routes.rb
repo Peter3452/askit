@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/index'
   resources :questions
 
-  root 'questions#index'
+  root 'pages#index'
 end
