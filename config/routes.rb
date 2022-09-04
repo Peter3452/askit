@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'answers/create'
   get 'pages/index'
-  resources :questions
+
+  resources :questions do 
+    resources :answers
+  end
 
   root 'pages#index'
 end

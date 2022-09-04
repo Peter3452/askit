@@ -6,6 +6,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @answer = @question.answers.build
+    @answers = Answer.order(created_at: :desc) #переменная во вьюхе, вывод вопросов
   end
 
   def new 
