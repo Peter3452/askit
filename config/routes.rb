@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/create'
-  get 'users/new'
+  resources :sessions
+
   get 'pages/index'
 
   resources :users
