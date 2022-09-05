@@ -1,1 +1,7 @@
-<h1>Hello Everyone!</h1>
+<h1>Welcome to Askit!</h1>
+
+<% if user_signed_in? %>
+  <%= current_user.name %>
+<% else %>
+  <%= link_to 'Sign_up', new_user_path %>
+<% end %>

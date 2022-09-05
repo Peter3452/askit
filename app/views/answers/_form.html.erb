@@ -1,4 +1,7 @@
 <h3>Edit answer</h3>
+
+<%= render 'questions/errors', object: @question %>
+
 <%= form_with model: [@question, @answer] do |f| %>
   <p>
     <%= f.label :body %>
